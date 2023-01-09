@@ -96,7 +96,7 @@ public class ApiStudyDemo {
 
 
         /*
-        tracsformation 数据转换
+        transformation 数据转换
          */
         /*map 将DataSet中的每一个元素转换为另一个元素*/
         SingleOutputStreamOperator<String> mapSingleOutputStreamOperator
@@ -141,9 +141,6 @@ public class ApiStudyDemo {
 
 
         /* reduce 实现复杂的聚合逻辑 */
-        /*
-        sink 数据输出
-         */
         SingleOutputStreamOperator<Tuple2<String, Long>> reduceSingleOutputStreamOperator = keyByKeyedStream.reduce(new ReduceFunction<Tuple2<String, Long>>() {
             @Override
             public Tuple2<String, Long> reduce(Tuple2<String, Long> value1, Tuple2<String, Long> value2) throws Exception {
@@ -155,8 +152,13 @@ public class ApiStudyDemo {
                 return null;
             }
         });
+
         reduceSingleOutputStreamOperator.print();
         reduceSingleOutputStreamOperator.print();
+        /*
+        sink 数据输出
+         */
+
 
 
         executionEnvironment.execute();
