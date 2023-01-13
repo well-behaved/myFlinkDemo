@@ -134,6 +134,17 @@
         </dependency>
         <!--日志 end-->
 
+
+        <!--lombok begin-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--lombok end-->
+
+
     </dependencies>
 
     <build>
@@ -167,6 +178,14 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+
+
+<!--            <plugin>-->
+<!--                <groupId>org.projectlombok</groupId>-->
+<!--                <artifactId>lombok-maven-plugin</artifactId>-->
+<!--                <version>1.16.6.1</version>-->
+<!--            </plugin>-->
+
         </plugins>
     </build>
 

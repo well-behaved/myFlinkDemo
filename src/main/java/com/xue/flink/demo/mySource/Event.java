@@ -1,18 +1,24 @@
 package com.xue.flink.demo.mySource;
 
+import java.sql.Date;
+
 /**
- * Copyright (c) 2020-2030 尚硅谷 All Rights Reserved
- * <p>
- * Project:  FlinkTutorial
- * <p>
- * Created by  wushengran
+ * @author: xuexiong@souche.com
+ * @date: 2023/1/12 17:15
+ * @description:
  */
-
-import java.sql.Timestamp;
-
 public class Event {
+    /**
+     * 用户姓名
+     */
     public String user;
+    /**
+     * 访问的地址
+     */
     public String url;
+    /**
+     * 访问的 时间戳
+     */
     public Long timestamp;
 
     public Event() {
@@ -29,7 +35,7 @@ public class Event {
         return "Event{" +
                 "user='" + user + '\'' +
                 ", url='" + url + '\'' +
-                ", timestamp=" + new Timestamp(timestamp) +
+                ", timestamp=" + new Date(timestamp) +
                 '}';
     }
 }
