@@ -12,7 +12,8 @@ public class ClickSource implements SourceFunction<Event> {
 
     @Override
     public void run(SourceContext<Event> ctx) throws Exception {
-        Random random = new Random();    // 在指定的数据集中随机选取数据
+        // 在指定的数据集中随机选取数据
+        Random random = new Random();
         String[] users = {"Mary", "Alice", "Bob", "Cary"};
         String[] urls = {"./home", "./cart", "./fav", "./prod?id=1", "./prod?id=2"};
 
