@@ -42,6 +42,7 @@ public class MySqlDemo {
         streamTableEnvironment.createTemporaryView("user_click_table", stream);
 
 
+
         /*
         执行sql
          */

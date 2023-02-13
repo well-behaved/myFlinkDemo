@@ -1,5 +1,8 @@
 package com.xue.flink.demo.mySource;
 
+import com.xue.flink.demo.utils.DateUtils;
+import lombok.Getter;
+
 import java.sql.Date;
 
 /**
@@ -7,6 +10,7 @@ import java.sql.Date;
  * @date: 2023/1/12 17:15
  * @description:
  */
+@Getter
 public class Event {
     /**
      * 用户姓名
@@ -35,7 +39,7 @@ public class Event {
         return "Event{" +
                 "user='" + user + '\'' +
                 ", url='" + url + '\'' +
-                ", timestamp=" + new Date(timestamp) +
+                ", timestamp=" + DateUtils.dateToStr(new Date(timestamp)) +
                 '}';
     }
 }
