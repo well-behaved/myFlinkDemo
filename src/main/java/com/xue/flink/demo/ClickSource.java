@@ -15,7 +15,7 @@ public class ClickSource implements SourceFunction<Event> {
         // 在指定的数据集中随机选取数据
         Random random = new Random();
         String[] users = {"Mary", "Alice", "Bob", "Cary"};
-        String[] urls = {"./home", "./cart", "./fav", "./prod?id=1", "./prod?id=2"};
+        String[] urls = {"百度", "天猫", "淘宝"};
 
         while (running) {
             ctx.collect(new Event(

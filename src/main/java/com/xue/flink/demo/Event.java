@@ -8,8 +8,12 @@ package com.xue.flink.demo;
  * Created by  wushengran
  */
 
-import java.sql.Timestamp;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.sql.Timestamp;
+@Getter
+@Setter
 public class Event {
     public String user;
     public String url;
